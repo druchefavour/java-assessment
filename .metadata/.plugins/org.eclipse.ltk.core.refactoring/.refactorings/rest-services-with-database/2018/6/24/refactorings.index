@@ -1,0 +1,9 @@
+1529111864023	Copy package
+1529111982854	Rename type 'PersonController'
+1529112010820	Rename type 'PersonRecord'
+1529112035659	Rename type 'PersonRecordService'
+1529112052778	Rename type 'PersonRepository'
+1529115444421	Delete element
+1529115553418	Rename type 'SpringBootmySqlApplication'
+1529116851974	Rename package 'io.angus.springbootcrud.person'
+1529116944999	Rename package 'io.angus.springbootcrud.topic'

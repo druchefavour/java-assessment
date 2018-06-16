@@ -1,0 +1,19 @@
+package io.angus.springbootcrud.topic;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PersonRecordService {
+	
+	private List<PersonRecord>personRecords=Arrays.asList(
+			new PersonRecord("Person1", "Rose Bobo", "2222 Weartherford Str. Houston, TX 77002", "281.502.2231"),
+			new PersonRecord("Person2", "John Derek", "312 Grandcanyon Str. Houston, TX 77014", "281.813.7421"),
+			new PersonRecord("Person3", "Doug Play", "2222 Rilley Circle. Houston, TX 77045", "281.602.3291")
+			);
+	public List<PersonRecord>getAllPersonRecord() {
+		return personRecords;
+	}
+}

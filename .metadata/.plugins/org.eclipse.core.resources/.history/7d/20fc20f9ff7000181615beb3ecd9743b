@@ -1,0 +1,13 @@
+package io.angus.springbootcrud.topic;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface PersonRepository extends CrudRepository<PersonRecord, String> {
+	CrudRepository
+	
+	//getAllPersonRecord
+0	//getPersonRecord(String id)
+	//updatePersonRecord(personrecord t)
+	//deletePersonRecord(String id)
+
+}

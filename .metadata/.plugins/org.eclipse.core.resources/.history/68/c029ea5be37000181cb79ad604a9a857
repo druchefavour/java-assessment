@@ -1,0 +1,5 @@
+package io.angus.sprinbootcrud.hello;
+
+public class HelloController {
+
+}

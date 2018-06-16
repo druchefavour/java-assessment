@@ -1,0 +1,5 @@
+package io.angus.springbootcrud.topic;
+
+public class PersonRecordService {
+
+}

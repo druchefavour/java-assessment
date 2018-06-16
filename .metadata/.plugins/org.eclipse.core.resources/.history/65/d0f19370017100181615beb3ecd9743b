@@ -1,0 +1,52 @@
+package io.angus.springbootcrud.topic;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PersonRecordService {
+	
+	private PersonRepository personRepository;
+	
+	private List<PersonRecord>personRecords=new ArrayList<>(Arrays.asList(
+			new PersonRecord("Person1", "Rose Bobo", "2222 Weartherford Str. Houston, TX 77002", "281.502.2231"),
+			new PersonRecord("Person2", "John Derek", "312 Grandcanyon Str. Houston, TX 77014", "281.813.7421"),
+			new PersonRecord("Person3", "Doug Play", "2222 Rilley Circle. Houston, TX 77045", "281.602.3291")
+			));
+	
+	public List<PersonRecord>getAllPersonRecord() {
+		List<PersonRecord> personRecords = new ArrayList<>(); 
+		personRepository.findAll()
+		.forEach(personRecords::add);
+		return personRecords;
+	}
+	
+	public PersonRecord getPersonRecord(String id) {
+		return personRecords.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+	}
+
+	public void addPersonRecord(PersonRecord personRecord) {
+		personRepository.save(personRecord);
+		
+	}
+
+	public void updatePersonRecord(String id, PersonRecord personRecord) {
+		for (int i = 0; i < personRecords.size(); i++) {
+			PersonRecord t = personRecords.get(i);
+			if(t.getId().equals(id)) {
+				personRecords.set (i, personRecord);
+				return;
+			}
+		}
+		
+	}
+
+	public void deletePersonRecord(String id) {
+		personRecords.removeIf(t -> t.getId().equals(id));
+	}
+	
+	
+}

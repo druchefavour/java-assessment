@@ -1,0 +1,9 @@
+package io.angus.springbootcrud.topic;
+
+public interface PersonRepository {
+	getAllPersonRecord
+	getPersonRecord(String id)
+	updatePersonRecord(personrecord t)
+	deletePersonRecord(String id)
+
+}

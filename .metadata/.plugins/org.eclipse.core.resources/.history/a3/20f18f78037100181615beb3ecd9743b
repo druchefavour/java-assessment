@@ -1,0 +1,39 @@
+package io.angus.springbootcrud.person;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PersonRecordService {
+	
+	private PersonRepository personRepository;
+	
+	public List<MySQLRecord>getAllPersonRecord() {
+		List<MySQLRecord> personRecords = new ArrayList<>(); 
+		personRepository.findAll()
+		.forEach(personRecords::add);
+		return personRecords;
+	}
+	
+	public Optional<MySQLRecord> getPersonRecord(String id) {
+		return personRepository.findById(id);
+	}
+
+	public void addPersonRecord(MySQLRecord personRecord) {
+		personRepository.save(personRecord);
+	}
+
+	public void updatePersonRecord(String id, MySQLRecord personRecord) {
+		personRepository.save(personRecord);
+		}
+		
+	public void deletePersonRecord(String id) {
+		personRepository.deleteById(id);
+	}
+	
+	
+}

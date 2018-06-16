@@ -1,0 +1,7 @@
+package io.angus.springbootcrud.person;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface MySQLRepository extends CrudRepository<MySQLRecord, String> {
+
+}
